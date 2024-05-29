@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestoreSources>$(MSBuildProjectDirectory)/pkg;$(RestoreSources)</RestoreSources>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="helo.lib.context.Json" Version="1.0.0" />
+    <PackageReference Include="helo.lib.helpers" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\helo.api.TipoIntervencionQuirurgica.service\helo.api.TipoIntervencionQuirurgica.service.csproj" />
+  </ItemGroup>
+
+</Project>
